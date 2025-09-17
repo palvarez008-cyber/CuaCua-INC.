@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú de Navegación</title>
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- CDN de Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --rojo: #dc2626;
+      --negro: #000000;
+      --blanco: #ffffff;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            rojo: 'var(--rojo)',
+            negro: 'var(--negro)',
+            blanco: 'var(--blanco)',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-blanco text-gray-800 font-sans">
+
+  <!-- Menú de navegación -->
+  <nav class="bg-negro text-blanco p-4 flex justify-between items-center sticky top-0 z-50 rounded-b-lg shadow-xl">
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <a href="Bienvenida.html" class="text-2xl font-bold flex items-center">
+        CuaCua <span class="text-rojo ml-1">INC.</span>
+      </a>
+    </div>
+
+    <!-- Botón para el menú móvil (hamburguesa) -->
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-blanco focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Enlaces del menú (visible en desktop, oculto en móvil por defecto) -->
+    <ul id="menu-links" class="hidden md:flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-sm md:text-base absolute md:static top-16 left-0 w-full md:w-auto bg-negro p-4 md:p-0 transition-all duration-300 ease-in-out">
+      <li><a href="Inicio 3.0 .html" class="font-bold hover:text-rojo transition-colors duration-300 block py-2 px-4 md:p-0 rounded-md hover:bg-gray-800 md:hover:bg-transparent">Nosotros</a></li>
+      <li><a href="Marcas 3.0.html" class="font-bold hover:text-rojo transition-colors duration-300 block py-2 px-4 md:p-0 rounded-md hover:bg-gray-800 md:hover:bg-transparent">Marcas</a></li>
+      <li><a href="Compras CUACUA Inc..html" class="font-bold hover:text-rojo transition-colors duration-300 block py-2 px-4 md:p-0 rounded-md hover:bg-gray-800 md:hover:bg-transparent">Guía de Compra</a></li>
+      <li><a href="#" class="font-bold hover:text-rojo transition-colors duration-300 block py-2 px-4 md:p-0 rounded-md hover:bg-gray-800 md:hover:bg-transparent">Contacto</a></li>
+      <li>
+        <a href="CARRITO.html" class="font-bold hover:text-rojo transition-colors duration-300 flex items-center space-x-2 block py-2 px-4 md:p-0 rounded-md hover:bg-gray-800 md:hover:bg-transparent">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Carrito</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.getElementById('menu-toggle');
+      const menuLinks = document.getElementById('menu-links');
+
+      menuToggle.addEventListener('click', () => {
+        // Alterna la clase 'hidden' para mostrar/ocultar el menú
+        menuLinks.classList.toggle('hidden');
+      });
+    });
+  </script>
+
+</body>
+</html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CuaCua INC. Footer</title>
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- CDN de Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            rojo: '#dc2626',
+            negro: '#000000',
+            blanco: '#ffffff',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-blanco text-gray-800 font-sans flex flex-col min-h-screen">
+
+
+  <main class="flex-grow">
+    <!-- Contenido principal de tu página iría aquí -->
+  </main>
+  
+  <footer class="bg-blanco py-16 px-4 md:px-8 lg:px-16 text-sm grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 gap-y-12">
+    
+    <!-- AYUDA -->
+    <div class="col-span-1">
+      <h4 class="font-bold text-negro mb-4 border-b-2 border-rojo pb-2">AYUDA</h4>
+      <ul class="space-y-2">
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Contáctanos</a></li>
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Rastrea tu pedido</a></li>
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Devoluciones</a></li>
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Envíos</a></li>
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Centro de ayuda</a></li>
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Reportar fraude</a></li>
+      </ul>
+    </div>
+
+    <!-- NOSOTROS -->
+    <div class="col-span-1">
+      <h4 class="font-bold text-negro mb-4 border-b-2 border-rojo pb-2">NOSOTROS</h4>
+      <ul class="space-y-2">
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">¿Quiénes somos?</a></li>
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Sustentabilidad</a></li>
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Nuestras comunidades</a></li>
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Carreras</a></li>
+      </ul>
+    </div>
+
+    <!-- INFORMACIÓN -->
+    <div class="col-span-1">
+      <h4 class="font-bold text-negro mb-4 border-b-2 border-rojo pb-2">INFORMACIÓN</h4>
+      <ul class="space-y-2">
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Localizador de tiendas</a></li>
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Guía de tallas</a></li>
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Mapa del sitio</a></li>
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Black Friday</a></li>
+      </ul>
+    </div>
+
+    <!-- CORPORATIVO & LEGAL -->
+    <div class="col-span-1">
+      <h4 class="font-bold text-negro mb-4 border-b-2 border-rojo pb-2">CORPORATIVO Y LEGAL</h4>
+      <ul class="space-y-2">
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Términos y condiciones</a></li>
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Uso del sitio</a></li>
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Política de privacidad</a></li>
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Política de impuestos</a></li>
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Accesibilidad</a></li>
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Cookies</a></li>
+        <li><a href="#" class="text-gray-600 hover:text-rojo transition-all duration-300 transform hover:-translate-y-1 block">Gestionar cookies</a></li>
+      </ul>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-2 bg-gray-50 rounded-lg p-6 flex flex-col items-center text-center shadow-md">
+      <h4 class="font-bold text-negro mb-2">10% DE DESCUENTO EN TU PRIMER COMPRA</h4>
+      <h5 class="font-bold text-negro mb-4">ÚNETE A LA LISTA CuaCua</h5>
+      <input type="email" placeholder="Correo electrónico*" class="w-full p-2 mb-4 border-b-2 border-negro bg-transparent outline-none focus:border-rojo transition-colors duration-300">
+      <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 mb-4">
+        <label class="flex items-center text-gray-600">
+          <input type="radio" name="genero" checked class="mr-2"> Ropa de mujer
+        </label>
+        <label class="flex items-center text-gray-600">
+          <input type="radio" name="genero" class="mr-2"> Ropa de hombre
+        </label>
+      </div>
+      <button class="w-full sm:w-auto bg-negro text-blanco py-3 px-6 rounded-full font-bold hover:bg-rojo transition-all duration-300 transform hover:scale-105">
+        Suscribirse
+      </button>
+      <p class="text-xs text-gray-500 mt-4">
+        Oferta válida solo en estilos a precio completo.<br>
+        Al suscribirte, aceptas nuestros <a href="#" class="text-rojo underline hover:no-underline">Términos y condiciones</a> y <a href="#" class="text-rojo underline hover:no-underline">Política de privacidad</a>.<br>
+        Para darte de baja, haz clic en "cancelar suscripción" al final de nuestros correos.
+      </p>
+    </div>
+
+    <!-- SÍGUENOS Y MAPA -->
+    <div class="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-6 flex flex-col md:flex-row md:justify-between items-start md:items-center mt-6 pt-6 border-t-2 border-gray-200">
+      <div>
+        <h4 class="font-bold text-negro mb-2">SÍGUENOS</h4>
+        <div class="flex space-x-6 text-2xl text-negro">
+          <a href="#" class="hover:text-rojo transition-all duration-300 transform hover:-translate-y-1"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-rojo transition-all duration-300 transform hover:-translate-y-1"><i class="fab fa-tiktok"></i></a>
+          <a href="#" class="hover:text-rojo transition-all duration-300 transform hover:-translate-y-1"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="hover:text-rojo transition-all duration-300 transform hover:-translate-y-1"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" class="hover:text-rojo transition-all duration-300 transform hover:-translate-y-1"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="hover:text-rojo transition-all duration-300 transform hover:-translate-y-1"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 mt-6 md:mt-0">
+        <h4 class="font-bold text-negro mb-2">Encuéntranos</h4>
+        <div class="rounded-lg overflow-hidden shadow-lg">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.003!2d-99.1332!3d19.4326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92abc12345%3ACuaCuaINC!2sCDMX!5e0!3m2!1ses!2smx!4v1700000000000"
+            allowfullscreen=""
+            loading="lazy"
+            class="w-full h-48 md:h-64 border-0">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+</html>

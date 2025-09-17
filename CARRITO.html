@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú de Navegación</title>
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- CDN de Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --rojo: #dc2626;
+      --negro: #000000;
+      --blanco: #ffffff;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            rojo: 'var(--rojo)',
+            negro: 'var(--negro)',
+            blanco: 'var(--blanco)',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-blanco text-gray-800 font-sans">
+
+  <!-- Menú de navegación -->
+  <nav class="bg-negro text-blanco p-4 flex justify-between items-center sticky top-0 z-50 rounded-b-lg shadow-xl">
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <a href="Bienvenida.html" class="text-2xl font-bold flex items-center">
+        CuaCua <span class="text-rojo ml-1">INC.</span>
+      </a>
+    </div>
+
+    <!-- Botón para el menú móvil (hamburguesa) -->
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-blanco focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Enlaces del menú (visible en desktop, oculto en móvil por defecto) -->
+    <ul id="menu-links" class="hidden md:flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-sm md:text-base absolute md:static top-16 left-0 w-full md:w-auto bg-negro p-4 md:p-0 transition-all duration-300 ease-in-out">
+      <li><a href="Inicio 3.0 .html" class="font-bold hover:text-rojo transition-colors duration-300 block py-2 px-4 md:p-0 rounded-md hover:bg-gray-800 md:hover:bg-transparent">Nosotros</a></li>
+      <li><a href="Marcas 3.0.html" class="font-bold hover:text-rojo transition-colors duration-300 block py-2 px-4 md:p-0 rounded-md hover:bg-gray-800 md:hover:bg-transparent">Marcas</a></li>
+      <li><a href="Compras CUACUA Inc..html" class="font-bold hover:text-rojo transition-colors duration-300 block py-2 px-4 md:p-0 rounded-md hover:bg-gray-800 md:hover:bg-transparent">Guía de Compra</a></li>
+      <li><a href="#" class="font-bold hover:text-rojo transition-colors duration-300 block py-2 px-4 md:p-0 rounded-md hover:bg-gray-800 md:hover:bg-transparent">Contacto</a></li>
+      <li>
+        <a href="CARRITO.html" class="font-bold hover:text-rojo transition-colors duration-300 flex items-center space-x-2 block py-2 px-4 md:p-0 rounded-md hover:bg-gray-800 md:hover:bg-transparent">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Carrito</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.getElementById('menu-toggle');
+      const menuLinks = document.getElementById('menu-links');
+
+      menuToggle.addEventListener('click', () => {
+        // Alterna la clase 'hidden' para mostrar/ocultar el menú
+        menuLinks.classList.toggle('hidden');
+      });
+    });
+  </script>
+
+</body>
+</html>
+    <style>
+        :root {
+            --primary-red: #dc3545;
+            --dark-bg: #212529;
+            --light-bg: #ffffff;
+            --text-color: #343a40;
+            --border-color: #dee2e6;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            flex: 1;
+        }
+        h1 {
+            color: var(--primary-red);
+            font-weight: bold;
+            border-bottom: 3px solid var(--primary-red);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2.8rem;
+        }
+        h1 .bi-cart {
+            color: var(--primary-red);
+        }
+        .table {
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .table thead {
+            background-color: var(--dark-bg);
+            color: var(--light-bg);
+        }
+        .table thead th {
+            border-bottom: none;
+            padding: 15px;
+        }
+        .table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .table td {
+            border-color: var(--border-color);
+            padding: 15px;
+        }
+        .table-bordered th, .table-bordered td {
+            border: 1px solid var(--border-color);
+        }
+        .total-row td {
+            font-weight: bold;
+            font-size: 1.25rem;
+            color: var(--primary-red);
+            border-top: 2px solid var(--primary-red);
+        }
+        .btn-pay {
+            background-color: var(--primary-red);
+            border-color: var(--primary-red);
+            padding: 10px 20px;
+            font-size: 1.25rem;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-pay:hover {
+            background-color: #c82333;
+            border-color: #c82333;
+            transform: translateY(-2px);
+        }
+        .alert-message {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--dark-bg);
+            color: var(--light-bg);
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease-in-out, visibility 0.5s;
+        }
+        .alert-message.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .footer {
+            background-color: var(--dark-bg);
+            color: var(--light-bg);
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body class="container mt-5">
+
+    <h1><i class="bi bi-cart"></i>🛒 Tu carrito</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody id="carritoBody"></tbody>
+        <tfoot id="carritoFooter">
+            <tr class="total-row">
+                <td class="text-end fw-bold">Total:</td>
+                <td id="totalPrice">$0</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <div class="d-grid gap-2">
+        <button id="payButton" class="btn btn-primary btn-pay mt-3" type="button">Pagar</button>
+    </div>
+
+    <div id="alertMessage" class="alert-message"></div>
+
+    <footer class="footer"> 
+        <div class="container">
+            <p class="mb-0">&copy; 2025 CuaCua INC., Distribuidor de moda, Todos los derechos reservados.</p>
+        </div>
+    </footer>   
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Cargar el carrito desde el almacenamiento local
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            
+            // Referencias a elementos del DOM
+            const tbody = document.getElementById("carritoBody");
+            const totalPriceElement = document.getElementById("totalPrice");
+            const payButton = document.getElementById("payButton");
+            const alertMessage = document.getElementById("alertMessage");
+
+            // Función para mostrar una notificación personalizada
+            function showMessage(message) {
+                alertMessage.textContent = message;
+                alertMessage.classList.add("show");
+                setTimeout(() => {
+                    alertMessage.classList.remove("show");
+                }, 3000); // El mensaje desaparece después de 3 segundos
+            }
+
+            // Función para calcular el total
+            function calculateTotal() {
+                return carrito.reduce((sum, item) => sum + item.precio, 0);
+            }
+
+            // Función para renderizar el carrito en la tabla
+            function renderCarrito() {
+                tbody.innerHTML = '';
+                carrito.forEach(item => {
+                    let fila = `<tr><td>${item.nombre}</td><td>$${item.precio.toLocaleString('es-MX')}</td></tr>`;
+                    tbody.innerHTML += fila;
+                });
+                
+                // Actualizar el total
+                const total = calculateTotal();
+                totalPriceElement.textContent = `$${total.toLocaleString('es-MX')}`;
+            }
+
+            // Manejador del botón de pago
+            payButton.addEventListener("click", () => {
+                if (carrito.length === 0) {
+                    showMessage("Tu carrito está vacío. ¡Añade productos para comprar!");
+                    return;
+                }
+                
+                // Simulación de proceso de pago
+                showMessage("Procesando pago...");
+                
+                setTimeout(() => {
+                    // Limpiar el carrito del almacenamiento local
+                    localStorage.setItem("carrito", "[]");
+                    carrito = [];
+                    renderCarrito();
+                    showMessage("¡Pago realizado con éxito! Tu carrito ha sido vaciado.");
+                }, 2000); // Espera 2 segundos para simular el pago
+            });
+
+            // Renderizar el carrito al cargar la página
+            renderCarrito();
+        });
+    </script>
+</body>
+</html>

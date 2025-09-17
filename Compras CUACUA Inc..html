@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-red: #dc3545;
+            --dark-bg: #212529;
+            --light-bg: #ffffff;
+            --text-color: #343a40;
+            --border-color: #dee2e6;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            flex: 1;
+        }
+        h1, h2 {
+            color: var(--primary-red);
+            font-weight: bold;
+            border-bottom: 3px solid var(--primary-red);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2.8rem;
+        }
+        h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            border-bottom: none;
+        }
+        .card-img-top {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .card {
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .btn-add-to-cart {
+            background-color: var(--primary-red);
+            border-color: var(--primary-red);
+            padding: 10px 20px;
+            font-size: 1.25rem;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-add-to-cart:hover {
+            background-color: #c82333;
+            border-color: #c82333;
+            transform: translateY(-2px);
+        }
+        .footer {
+            background-color: var(--dark-bg);
+            color: var(--light-bg);
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Estilos personalizados para el menú de navegación */
+        #navbar-example2 {
+            background-color: var(--dark-bg) !important;
+            padding: 10px 20px;
+        }
+        #navbar-example2 .navbar-brand {
+            font-weight: bold;
+            color: var(--light-bg);
+            font-size: 1.5rem;
+        }
+        #navbar-example2 .navbar-brand span {
+            color: var(--primary-red);
+        }
+        #navbar-example2 .nav-link {
+            color: rgba(255, 255, 255, 0.75);
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        #navbar-example2 .nav-link:hover {
+            color: var(--primary-red);
+        }
+        #navbar-example2 .nav-link.active {
+            color: var(--light-bg);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        #navbar-example2 .bi-cart {
+            font-size: 1.25rem;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column">
+
+    <nav id="navbar-example2" class="navbar navbar-dark bg-dark px-3 sticky-top">
+        <a class="navbar-brand" href="#inicio">CuaCua <span>INC.</span></a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="Inicio 3.0 .html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Marcas 3.0.html">Marcas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Compras CUACUA Inc..html">Guía de Compra</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Parte de abajo 2.0.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="CARRITO.html">
+                    <i class="bi bi-cart"></i> Carrito
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="container mt-5">
+        <h1> Tienda de Ropa</h1>
+
+        <h2 class="text-center my-4">Guía de Compra</h2>
+        <p class="text-center">¿Listo para comprar? Te compartimos los pasos para pedir tu ropa favorita desde nuestra app, ¡fácil y rápido!</p>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 my-5">
+            <div class="col">
+                <div class="card h-100 text-center shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">1. Ingresa o Regístrate</h5>
+                        <p class="card-text">Crea tu cuenta e inicia sesión para empezar a comprar.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">2. Explora y Elige</h5>
+                        <p class="card-text">Busca por marca, talla o estilo. Revisa fotos y detalles del producto.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">3. Agrega y Confirma</h5>
+                        <p class="card-text">Añade tus prendas al carrito y verifica tallas y cantidades.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">4. Selecciona el Pago</h5>
+                        <p class="card-text">Paga con tarjeta, PayPal o en sucursales con convenio como Palacio de Hierro.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">5. Recibe tu Pedido</h5>
+                        <p class="card-text">Disfruta de envíos rápidos en todo México y también internacionales. Sigue tu pedido desde la app.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 class="text-center my-4">Productos</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 my-4">
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://placehold.co/300x300/e9ecef/212529?text=Chamarra+Allsaints" class="card-img-top" alt="Chamarra de cuero Allsaints">
+                    <div class="card-body">
+                        <h5 class="card-title">Chamarra de cuero Allsaints</h5>
+                        <p class="card-text" data-price="12000">$12,000</p>
+                        <a href="#" class="btn btn-primary btn-add-to-cart">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://placehold.co/300x300/e9ecef/212529?text=Calcetas+Miumiu" class="card-img-top" alt="Calcetas Miumiu">
+                    <div class="card-body">
+                        <h5 class="card-title">Calcetas Miumiu</h5>
+                        <p class="card-text" data-price="20000">$20,000</p>
+                        <a href="#" class="btn btn-primary btn-add-to-cart">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://placehold.co/300x300/e9ecef/212529?text=Camisa+Dutti" class="card-img-top" alt="Camisa de lino Massimo Dutti">
+                    <div class="card-body">
+                        <h5 class="card-title">Camisa de lino Massimo Dutti</h5>
+                        <p class="card-text" data-price="1400">$1,400</p>
+                        <a href="#" class="btn btn-primary btn-add-to-cart">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://placehold.co/300x300/e9ecef/212529?text=Lentes+Miumiu" class="card-img-top" alt="Lentes Miumiu">
+                    <div class="card-body">
+                        <h5 class="card-title">Lentes Miumiu</h5>
+                        <p class="card-text" data-price="50000">$50,000</p>
+                        <a href="#" class="btn btn-primary btn-add-to-cart">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://placehold.co/300x300/e9ecef/212529?text=Pantalon+Miumiu" class="card-img-top" alt="Pantalón Miumiu">
+                    <div class="card-body">
+                        <h5 class="card-title">Pantalón Miumiu</h5>
+                        <p class="card-text" data-price="57000">$57,000</p>
+                        <a href="#" class="btn btn-primary btn-add-to-cart">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://placehold.co/300x300/e9ecef/212529?text=Saco+Chanel" class="card-img-top" alt="Saco Chanel">
+                    <div class="card-body">
+                        <h5 class="card-title">Saco Chanel</h5>
+                        <p class="card-text" data-price="120000">$120,000</p>
+                        <a href="#" class="btn btn-primary btn-add-to-cart">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://placehold.co/300x300/e9ecef/212529?text=T-shirt+Allsaints" class="card-img-top" alt="T-shirt Allsaints">
+                    <div class="card-body">
+                        <h5 class="card-title">T-shirt Allsaints</h5>
+                        <p class="card-text" data-price="2800">$2,800</p>
+                        <a href="#" class="btn btn-primary btn-add-to-cart">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://placehold.co/300x300/e9ecef/212529?text=T-shirt+AntiSocial" class="card-img-top" alt="T-shirt Anti Social Club">
+                    <div class="card-body">
+                        <h5 class="card-title">T-shirt Anti Social Club</h5>
+                        <p class="card-text" data-price="2300">$2,300</p>
+                        <a href="#" class="btn btn-primary btn-add-to-cart">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://placehold.co/300x300/e9ecef/212529?text=Tenis+Zegna" class="card-img-top" alt="Tenis Zegna">
+                    <div class="card-body">
+                        <h5 class="card-title">Tenis Zegna</h5>
+                        <p class="card-text" data-price="19300">$19,300</p>
+                        <a href="#" class="btn btn-primary btn-add-to-cart">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer"> 
+        <div class="container">
+            <p class="mb-0">&copy; 2025 CuaCua INC., Distribuidor de moda, Todos los derechos reservados.</p>
+        </div>
+    </footer>   
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

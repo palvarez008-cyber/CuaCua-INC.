@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head> 
+    <title>CuaCua, INC. - Tu moda, tu canto, tu sello</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <style>
+      :root {
+          --primary-red: #dc3545; /* Rojo principal para énfasis */
+          --dark-bg: #212529;    /* Negro para fondos y texto */
+          --light-bg: #ffffff;   /* Blanco para fondos claros */
+          --text-color: #343a40; /* Color de texto general */
+          --border-color: #dee2e6; /* Color de borde */
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--light-bg);
+        color: var(--text-color);
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: 700;
+        color: var(--dark-bg);
+      }
+      h1 {
+        color: var(--primary-red);
+        border-bottom: 3px solid var(--primary-red);
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+        font-size: 2.8rem;
+      }
+      h1 .bi-cart {
+        color: var(--primary-red);
+      }
+      .navbar {
+        background-color: var(--dark-bg) !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        padding: 1rem 0;
+      }
+      .navbar-brand {
+        color: var(--light-bg) !important;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+      .navbar-brand span {
+          color: var(--primary-red);
+      }
+      .nav-link {
+        color: var(--light-bg) !important;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+      }
+      .nav-link:hover, .nav-link.active {
+        color: var(--primary-red) !important;
+        border-bottom: 2px solid var(--primary-red);
+      }
+      .btn-primary {
+        background-color: var(--primary-red);
+        border-color: var(--primary-red);
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+      }
+      .btn-primary:hover {
+        background-color: #c82333; /* Un rojo un poco más oscuro al pasar el ratón */
+        border-color: #c82333;
+      }
+      .btn-outline-dark {
+        color: var(--dark-bg);
+        border-color: var(--dark-bg);
+      }
+      .btn-outline-dark:hover {
+        background-color: var(--dark-bg);
+        color: var(--light-bg);
+      }
+      .product-card {
+          margin-bottom: 20px;
+          border: none;
+          border-radius: 10px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          transition: transform 0.2s ease-in-out;
+          background-color: var(--light-bg);
+      }
+      .product-card:hover {
+          transform: translateY(-5px);
+      }
+      .product-card .card-title {
+          color: var(--dark-bg);
+          font-weight: 600;
+      }
+      .product-card .card-text {
+          color: var(--primary-red);
+          font-size: 1.1rem;
+          font-weight: bold;
+      }
+      .table {
+        background-color: var(--light-bg);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border: 1px solid var(--border-color);
+      }
+      .table thead {
+        background-color: var(--dark-bg);
+        color: var(--light-bg);
+      }
+      .table thead th {
+        border-bottom: none;
+        padding: 15px;
+      }
+      .table tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .table td {
+        border-color: var(--border-color);
+        padding: 15px;
+      }
+      .scrollspy-example {
+        padding-top: 20px; /* Espacio para que el contenido no quede oculto bajo la barra de navegación fija */
+      }
+      .carousel-item img {
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+      .card.h-100.text-center.shadow-sm {
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08) !important;
+        border: none;
+        background-color: var(--light-bg);
+        transition: transform 0.2s ease-in-out;
+      }
+      .card.h-100.text-center.shadow-sm:hover {
+        transform: translateY(-3px);
+      }
+      .footer {
+          background-color: var(--dark-bg);
+          color: var(--light-bg);
+          padding: 20px 0;
+      }
+      .footer p {
+          margin-bottom: 0;
+      }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Descripción" content="CUA CUA INC es una distribuidora de moda innovadora que ofrece tendencias actuales, calidad accesible y estilo moderno para todos.">
+    <meta name="keywords" content="Moda,ropa,diseñador,distribuidor,cuacua">
+    <meta name="author" content="Equipo CuaCua Inc.">
+    <meta name="copyright" content="&copy; 2025 CuaCua Inc. la casa de moda en Mexico">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0"> 
+    <div class="container">
+        <header class="py-5 text-center">
+            <h1 class="fw-bold"><span style="color: var(--primary-red);">CuaCua INC.</span></h1>
+            <p class="lead" style="color: var(--text-color);">"Tu moda, tu canto, tu sello"</p>
+        </header>
+
+        <nav id="navbar-example2" class="navbar navbar-dark bg-dark px-3 sticky-top">
+            <a class="navbar-brand" href="#inicio">CuaCua <span>INC.</span></a>
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="Inicio 3.0 .html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Marcas 3.0.html">Marcas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Compras CUACUA Inc..html">Guía de Compra</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Productos 3.0.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="CARRITO.html">
+                        <i class="bi bi-cart"></i> Carrito
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+            <div id="nosotros" class="my-5 py-3">
+                <h1 class="text-center my-4">¡Bienvenidos a la mejor distribuidora de ropa de diseñador en México!</h1>
+                <nav class="d-flex justify-content-center flex-wrap my-4">
+                    <a href="https://www.zara.com" class="btn btn-outline-dark mx-2 my-1">Zara</a>
+                    <a href="https://www.massimodutti.com/mx" class="btn btn-outline-dark mx-2 my-1">Massimo Dutti</a>
+                    <a href="https://www.allsaints.com/row" class="btn btn-outline-dark mx-2 my-1">ALLSAINTS</a>
+                    <a href="https://www.zegna.com/mx-es/" class="btn btn-outline-dark mx-2 my-1">Zegna</a>
+                    <a href="https://www.boggi.com/es_MX/default-homepage" class="btn btn-outline-dark mx-2 my-1">Boggi</a>
+                    <a href="https://www.chanel.com/mx/perfumes/chance/eau-splendide/" class="btn btn-outline-dark mx-2 my-1">Chanel</a>
+                </nav>
+                <hr style="border-top: 1px solid var(--border-color);">
+                <div class="row my-5">
+                    <div class="col-md-6 mb-4">
+                        <h2 style="color: var(--primary-red);">¿Quiénes somos?</h2>
+                        <p>Somos el distribuidor líder de ropa de lujo en México. Nuestra misión es ofrecer las marcas más exclusivas y las prendas de más alta calidad a nuestros clientes, garantizando una experiencia de compra inigualable. Trabajamos con diseñadores de renombre internacional para traer lo último en moda directamente a tu armario.</p>
+                        <img src="https://via.placeholder.com/600x400/dc3545/ffffff?text=Portada+CuaCua+INC" alt="Ropa de alta moda" class="img-fluid rounded shadow-sm mt-3">
+                    </div>
+                    <div class="col-md-6">
+                        <h2 style="color: var(--primary-red);">Objetivo</h2>
+                        <p>Nuestro objetivo principal fue vestir a México con la elegancia de las pasarelas internacionales. Su pequeña sastrería se transformó en el principal distribuidor de ropa de lujo del país, trayendo las marcas más exclusivas y la alta costura directamente a México. Alberto demostró que la verdadera pasión y el cuidado se reflejan en cada prenda, convirtiendo el lujo en un arte accesible para todos.</p>
+                        <h3 class="mt-4" style="color: var(--dark-bg);">¿Por qué escogernos?</h3>
+                        <p>Nosotros no solo vendemos ropa, ofrecemos una experiencia de lujo incomparable. Al elegirnos, tienes acceso a las marcas más exclusivas y de alta costura del mundo, curadas meticulosamente para garantizar la máxima calidad y estilo. Nuestro compromiso es brindarte prendas auténticas y un servicio excepcional, asegurando que cada compra sea una inversión en tu guardarropa. Con nosotros, te unes a una comunidad que valora la elegancia, la sofisticación y el arte de vestir bien.</p>
+                        <blockquote class="blockquote fst-italic mt-4" style="border-left: 5px solid var(--primary-red); padding-left: 15px; color: var(--text-color);">
+                            <p>"El estilo es una forma de decir quién eres sin hablar." <br> -Rachel Zoe</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <hr style="border-top: 1px solid var(--border-color);">
+
+            <div id="marcas" class="my-5 py-3">
+                <h2 class="text-center my-4">Nuestras Marcas</h2>
+                <div id="carouselExampleControls" class="carousel slide my-4" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="https://via.placeholder.com/800x400/212529/ffffff?text=ALLSAINTS" alt="Allsaints">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://via.placeholder.com/800x400/212529/ffffff?text=CHANEL" alt="Chanel">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://via.placeholder.com/800x400/212529/ffffff?text=MIU+MIU" alt="Miu Miu">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <ul class="list-inline text-center my-4">
+                    <li class="list-inline-item" style="color: var(--dark-bg); font-weight: 600;">Chanel</li>
+                    <li class="list-inline-item" style="color: var(--dark-bg); font-weight: 600;">Miu Miu</li>
+                    <li class="list-inline-item" style="color: var(--dark-bg); font-weight: 600;">Massimo Dutti</li>
+                    <li class="list-inline-item" style="color: var(--dark-bg); font-weight: 600;">Allsaints</li>
+                    <li class="list-inline-item" style="color: var(--dark-bg); font-weight: 600;">Boggi</li>
+                </ul>
+            </div>
+
+            <hr style="border-top: 1px solid var(--border-color);">
+
+            <div id="guia" class="my-5 py-3">
+                <h2 class="text-center my-4">Guía de Compra</h2>
+                <p class="text-center lead">¿Listo para comprar? Te compartimos los pasos para pedir tu ropa favorita desde nuestra app, ¡fácil y rápido!</p>
+                <div class="row row-cols-1 row-cols-md-3 g-4 my-5">
+                    <div class="col">
+                        <div class="card h-100 text-center shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: var(--primary-red);">1. Ingresa o Regístrate</h5>
+                                <p class="card-text">Crea tu cuenta e inicia sesión para empezar a comprar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 text-center shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: var(--primary-red);">2. Explora y Elige</h5>
+                                <p class="card-text">Busca por marca, talla o estilo. Revisa fotos y detalles del producto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 text-center shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: var(--primary-red);">3. Agrega y Confirma</h5>
+                                <p class="card-text">Añade tus prendas al carrito y verifica tallas y cantidades.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 text-center shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: var(--primary-red);">4. Selecciona el Pago</h5>
+                                <p class="card-text">Paga con tarjeta, PayPal o en sucursales con convenio como Palacio de Hierro.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 text-center shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: var(--primary-red);">5. Recibe tu Pedido</h5>
+                                <p class="card-text">Disfruta de envíos rápidos en todo México y también internacionales. Sigue tu pedido desde la app.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr style="border-top: 1px solid var(--border-color);">
+
+            <div id="productos" class="my-5 py-3">
+                <h2 class="text-center my-4">Productos Exclusivos</h2>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 my-4">
+                    <div class="col">
+                        <div class="card h-100 shadow-sm product-card" data-nombre="Chamarra de cuero Allsaints" data-precio="12000">
+                            <img src="https://via.placeholder.com/400x300/212529/ffffff?text=Chamarra+Allsaints" class="card-img-top" alt="Chamarra de cuero Allsaints">
+                            <div class="card-body">
+                                <h5 class="card-title">Chamarra de cuero Allsaints</h5>
+                                <p class="card-text">$12,000</p>
+                                <a href="#carrito" class="btn btn-primary add-to-cart">Añadir al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm product-card" data-nombre="Calcetas Miumiu" data-precio="20000">
+                            <img src="https://via.placeholder.com/400x300/212529/ffffff?text=Calcetas+Miumiu" class="card-img-top" alt="Calcetas Miumiu">
+                            <div class="card-body">
+                                <h5 class="card-title">Calcetas Miumiu</h5>
+                                <p class="card-text">$20,000</p>
+                                <a href="#carrito" class="btn btn-primary add-to-cart">Añadir al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm product-card" data-nombre="Camisa de lino Massimo Dutti" data-precio="1400">
+                            <img src="https://via.placeholder.com/400x300/212529/ffffff?text=Camisa+Massimo+Dutti" class="card-img-top" alt="Camisa de lino Massimo Dutti">
+                            <div class="card-body">
+                                <h5 class="card-title">Camisa de lino Massimo Dutti</h5>
+                                <p class="card-text">$1,400</p>
+                                <a href="#carrito" class="btn btn-primary add-to-cart">Añadir al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm product-card" data-nombre="Lentes Miumiu" data-precio="50000">
+                            <img src="https://via.placeholder.com/400x300/212529/ffffff?text=Lentes+Miumiu" class="card-img-top" alt="Lentes Miumiu">
+                            <div class="card-body">
+                                <h5 class="card-title">Lentes Miumiu</h5>
+                                <p class="card-text">$50,000</p>
+                                <a href="#carrito" class="btn btn-primary add-to-cart">Añadir al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm product-card" data-nombre="Pantalón Miumiu" data-precio="57000">
+                            <img src="https://via.placeholder.com/400x300/212529/ffffff?text=Pantalon+Miumiu" class="card-img-top" alt="Pantalón Miumiu">
+                            <div class="card-body">
+                                <h5 class="card-title">Pantalón Miumiu</h5>
+                                <p class="card-text">$57,000</p>
+                                <a href="#carrito" class="btn btn-primary add-to-cart">Añadir al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm product-card" data-nombre="Saco Chanel" data-precio="120000">
+                            <img src="https://via.placeholder.com/400x300/212529/ffffff?text=Saco+Chanel" class="card-img-top" alt="Saco Chanel">
+                            <div class="card-body">
+                                <h5 class="card-title">Saco Chanel</h5>
+                                <p class="card-text">$120,000</p>
+                                <a href="#carrito" class="btn btn-primary add-to-cart">Añadir al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm product-card" data-nombre="T-shirt Allsaints" data-precio="2800">
+                            <img src="https://via.placeholder.com/400x300/212529/ffffff?text=T-shirt+Allsaints" class="card-img-top" alt="T-shirt Allsaints">
+                            <div class="card-body">
+                                <h5 class="card-title">T-shirt Allsaints</h5>
+                                <p class="card-text">$2,800</p>
+                                <a href="#carrito" class="btn btn-primary add-to-cart">Añadir al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm product-card" data-nombre="T-shirt Anti Social Club" data-precio="2300">
+                            <img src="https://via.placeholder.com/400x300/212529/ffffff?text=T-shirt+Anti+Social+Club" class="card-img-top" alt="T-shirt Anti Social Club">
+                            <div class="card-body">
+                                <h5 class="card-title">T-shirt Anti Social Club</h5>
+                                <p class="card-text">$2,300</p>
+                                <a href="#carrito" class="btn btn-primary add-to-cart">Añadir al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm product-card" data-nombre="Tenis Zegna" data-precio="19300">
+                            <img src="https://via.placeholder.com/400x300/212529/ffffff?text=Tenis+Zegna" class="card-img-top" alt="Tenis Zegna">
+                            <div class="card-body">
+                                <h5 class="card-title">Tenis Zegna</h5>
+                                <p class="card-text">$19,300</p>
+                                <a href="#carrito" class="btn btn-primary add-to-cart">Añadir al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr style="border-top: 1px solid var(--border-color);">
+
+            <div id="carrito" class="my-5 py-3">
+                <h1 class="text-center"><i class="bi bi-cart"></i>🛒 Tu carrito</h1>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="carritoBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer text-center mt-5"> 
+        <div class="container">
+            <p class="mb-0">&copy; 2025 CuaCua INC., Distribuidor de moda, Todos los derechos reservados.</p>
+            <p class="mb-0">Contacto: info@cuacuainc.com | Tel: +52 55 1234 5678</p>
+        </div>
+    </footer>   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+        function renderCarrito() {
+          let tbody = document.getElementById("carritoBody");
+          tbody.innerHTML = '';
+          carrito.forEach(item => {
+            let fila = `<tr><td>${item.nombre}</td><td>$${item.precio.toLocaleString()}</td></tr>`;
+            tbody.innerHTML += fila;
+          });
+        }
+
+        function agregarAlCarrito(producto) {
+          carrito.push(producto);
+          localStorage.setItem("carrito", JSON.stringify(carrito));
+          renderCarrito();
+        }
+
+        document.querySelectorAll(".add-to-cart").forEach(button => {
+          button.addEventListener("click", (e) => {
+            e.preventDefault();
+            const card = e.target.closest(".product-card");
+            const nombre = card.dataset.nombre;
+            const precio = parseInt(card.dataset.precio);
+            agregarAlCarrito({ nombre, precio });
+            alert(`"${nombre}" ha sido añadido al carrito. ¡Gracias por tu compra!`);
+          });
+        });
+
+        renderCarrito();
+      });
+    </script>
+</body>
+</html>

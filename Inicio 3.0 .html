@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head> 
+    <title>CuaCua, INC. - Tu moda, tu canto, tu sello</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <style>
+      :root {
+          --primary-red: #dc3545; /* Rojo principal para énfasis */
+          --dark-bg: #212529;    /* Negro para fondos y texto */
+          --light-bg: #ffffff;   /* Blanco para fondos claros */
+          --text-color: #343a40; /* Color de texto general */
+          --border-color: #dee2e6; /* Color de borde */
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--light-bg);
+        color: var(--text-color);
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: 700;
+        color: var(--dark-bg);
+      }
+      h1 {
+        color: var(--primary-red);
+        border-bottom: 3px solid var(--primary-red);
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+        font-size: 2.8rem;
+      }
+      h1 .bi-cart {
+        color: var(--primary-red);
+      }
+      .navbar {
+        background-color: var(--dark-bg) !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        padding: 1rem 0;
+      }
+      .navbar-brand {
+        color: var(--light-bg) !important;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+      .navbar-brand span {
+          color: var(--primary-red);
+      }
+      .nav-link {
+        color: var(--light-bg) !important;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+      }
+      .nav-link:hover, .nav-link.active {
+        color: var(--primary-red) !important;
+        border-bottom: 2px solid var(--primary-red);
+      }
+      .btn-primary {
+        background-color: var(--primary-red);
+        border-color: var(--primary-red);
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+      }
+      .btn-primary:hover {
+        background-color: #c82333; /* Un rojo un poco más oscuro al pasar el ratón */
+        border-color: #c82333;
+      }
+      .btn-outline-dark {
+        color: var(--dark-bg);
+        border-color: var(--dark-bg);
+      }
+      .btn-outline-dark:hover {
+        background-color: var(--dark-bg);
+        color: var(--light-bg);
+      }
+      .product-card {
+          margin-bottom: 20px;
+          border: none;
+          border-radius: 10px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          transition: transform 0.2s ease-in-out;
+          background-color: var(--light-bg);
+      }
+      .product-card:hover {
+          transform: translateY(-5px);
+      }
+      .product-card .card-title {
+          color: var(--dark-bg);
+          font-weight: 600;
+      }
+      .product-card .card-text {
+          color: var(--primary-red);
+          font-size: 1.1rem;
+          font-weight: bold;
+      }
+      .table {
+        background-color: var(--light-bg);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border: 1px solid var(--border-color);
+      }
+      .table thead {
+        background-color: var(--dark-bg);
+        color: var(--light-bg);
+      }
+      .table thead th {
+        border-bottom: none;
+        padding: 15px;
+      }
+      .table tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .table td {
+        border-color: var(--border-color);
+        padding: 15px;
+      }
+      .scrollspy-example {
+        padding-top: 20px; /* Espacio para que el contenido no quede oculto bajo la barra de navegación fija */
+      }
+      .carousel-item img {
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+      .card.h-100.text-center.shadow-sm {
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08) !important;
+        border: none;
+        background-color: var(--light-bg);
+        transition: transform 0.2s ease-in-out;
+      }
+      .card.h-100.text-center.shadow-sm:hover {
+        transform: translateY(-3px);
+      }
+      .footer {
+          background-color: var(--dark-bg);
+          color: var(--light-bg);
+          padding: 20px 0;
+      }
+      .footer p {
+          margin-bottom: 0;
+      }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Descripción" content="CUA CUA INC es una distribuidora de moda innovadora que ofrece tendencias actuales, calidad accesible y estilo moderno para todos.">
+    <meta name="keywords" content="Moda,ropa,diseñador,distribuidor,cuacua">
+    <meta name="author" content="Equipo CuaCua Inc.">
+    <meta name="copyright" content="&copy; 2025 CuaCua Inc. la casa de moda en Mexico">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0"> 
+    <div class="container">
+        <header class="py-5 text-center">
+            <h1 class="fw-bold"><span style="color: var(--primary-red);">CuaCua INC.</span></h1>
+            <p class="lead" style="color: var(--text-color);">"Tu moda, tu canto, tu sello"</p>
+        </header>
+
+        <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú de Navegación</title>
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- CDN de Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --rojo: #dc2626;
+      --negro: #000000;
+      --blanco: #ffffff;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            rojo: 'var(--rojo)',
+            negro: 'var(--negro)',
+            blanco: 'var(--blanco)',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-blanco text-gray-800 font-sans">
+
+  <!-- Menú de navegación -->
+  <nav class="bg-negro text-blanco p-4 flex justify-between items-center sticky top-0 z-50 rounded-b-lg shadow-xl">
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <a href="Bienvenida.html" class="text-2xl font-bold flex items-center">
+        CuaCua <span class="text-rojo ml-1">INC.</span>
+      </a>
+    </div>
+
+    <!-- Botón para el menú móvil (hamburguesa) -->
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-blanco focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Enlaces del menú (visible en desktop, oculto en móvil por defecto) -->
+    <ul id="menu-links" class="hidden md:flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-sm md:text-base absolute md:static top-16 left-0 w-full md:w-auto bg-negro p-4 md:p-0 transition-all duration-300 ease-in-out">
+      <li><a href="Inicio 3.0 .html" class="font-bold hover:text-rojo transition-colors duration-300 block py-2 px-4 md:p-0 rounded-md hover:bg-gray-800 md:hover:bg-transparent">Nosotros</a></li>
+      <li><a href="Marcas 3.0.html" class="font-bold hover:text-rojo transition-colors duration-300 block py-2 px-4 md:p-0 rounded-md hover:bg-gray-800 md:hover:bg-transparent">Marcas</a></li>
+      <li><a href="Compras CUACUA Inc..html" class="font-bold hover:text-rojo transition-colors duration-300 block py-2 px-4 md:p-0 rounded-md hover:bg-gray-800 md:hover:bg-transparent">Guía de Compra</a></li>
+      <li><a href="#" class="font-bold hover:text-rojo transition-colors duration-300 block py-2 px-4 md:p-0 rounded-md hover:bg-gray-800 md:hover:bg-transparent">Contacto</a></li>
+      <li>
+        <a href="CARRITO.html" class="font-bold hover:text-rojo transition-colors duration-300 flex items-center space-x-2 block py-2 px-4 md:p-0 rounded-md hover:bg-gray-800 md:hover:bg-transparent">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Carrito</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.getElementById('menu-toggle');
+      const menuLinks = document.getElementById('menu-links');
+
+      menuToggle.addEventListener('click', () => {
+        // Alterna la clase 'hidden' para mostrar/ocultar el menú
+        menuLinks.classList.toggle('hidden');
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+        <div data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+            <div id="nosotros" class="my-5 py-3">
+                <h1 class="text-center my-4">¡Bienvenidos a la mejor distribuidora de ropa de diseñador en México!</h1>
+                <nav class="d-flex justify-content-center flex-wrap my-4">
+                    <a href="https://www.zara.com" class="btn btn-outline-dark mx-2 my-1">Zara</a>
+                    <a href="https://www.massimodutti.com/mx" class="btn btn-outline-dark mx-2 my-1">Massimo Dutti</a>
+                    <a href="https://www.allsaints.com/row" class="btn btn-outline-dark mx-2 my-1">ALLSAINTS</a>
+                    <a href="https://www.zegna.com/mx-es/" class="btn btn-outline-dark mx-2 my-1">Zegna</a>
+                    <a href="https://www.boggi.com/es_MX/default-homepage" class="btn btn-outline-dark mx-2 my-1">Boggi</a>
+                    <a href="https://www.chanel.com/mx/perfumes/chance/eau-splendide/" class="btn btn-outline-dark mx-2 my-1">Chanel</a>
+                </nav>
+                <hr style="border-top: 1px solid var(--border-color);">
+                <div class="row my-5">
+                    <div class="col-md-6 mb-4">
+                        <h2 style="color: var(--primary-red);">¿Quiénes somos?</h2>
+                        <p>Somos el distribuidor líder de ropa de lujo en México. Nuestra misión es ofrecer las marcas más exclusivas y las prendas de más alta calidad a nuestros clientes, garantizando una experiencia de compra inigualable. Trabajamos con diseñadores de renombre internacional para traer lo último en moda directamente a tu armario.</p>
+                        <img src="https://via.placeholder.com/600x400/dc3545/ffffff?text=Portada+CuaCua+INC" alt="Ropa de alta moda" class="img-fluid rounded shadow-sm mt-3">
+                    </div>
+                    <div class="col-md-6">
+                        <h2 style="color: var(--primary-red);">Objetivo</h2>
+                        <p>Nuestro objetivo principal fue vestir a México con la elegancia de las pasarelas internacionales. Su pequeña sastrería se transformó en el principal distribuidor de ropa de lujo del país, trayendo las marcas más exclusivas y la alta costura directamente a México. Alberto demostró que la verdadera pasión y el cuidado se reflejan en cada prenda, convirtiendo el lujo en un arte accesible para todos.</p>
+                        <h3 class="mt-4" style="color: var(--dark-bg);">¿Por qué escogernos?</h3>
+                        <p>Nosotros no solo vendemos ropa, ofrecemos una experiencia de lujo incomparable. Al elegirnos, tienes acceso a las marcas más exclusivas y de alta costura del mundo, curadas meticulosamente para garantizar la máxima calidad y estilo. Nuestro compromiso es brindarte prendas auténticas y un servicio excepcional, asegurando que cada compra sea una inversión en tu guardarropa. Con nosotros, te unes a una comunidad que valora la elegancia, la sofisticación y el arte de vestir bien.</p>
+                        <blockquote class="blockquote fst-italic mt-4" style="border-left: 5px solid var(--primary-red); padding-left: 15px; color: var(--text-color);">
+                            <p>"El estilo es una forma de decir quién eres sin hablar." <br> -Rachel Zoe</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
